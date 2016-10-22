@@ -4,10 +4,5 @@ rvm:
   - 2.2
   - 2.1
 
-before_install:
-  - brew update
-  - brew install imagemagick
-  - brew install gs
-  
 services:
   - postgresql
