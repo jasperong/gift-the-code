@@ -51,6 +51,9 @@ GEM
       execjs (~> 2.0)
     bbcoder (1.1.1)
     bcrypt (3.1.11)
+    bootstrap (4.0.0.alpha5)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     builder (3.2.2)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -242,6 +245,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap (~> 4.0.0.alpha5)
   byebug
   coffee-rails (~> 4.2)
   devise
@@ -254,6 +258,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  sprockets-rails
   thredded
   turbolinks (~> 5)
   tzinfo-data
