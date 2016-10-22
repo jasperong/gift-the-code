@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'creatives/index'
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'home#index'
+  root to: 'creatives#index'
   mount Thredded::Engine => '/forum'
 
 end
