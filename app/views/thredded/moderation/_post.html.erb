@@ -1,0 +1,19 @@
+<%# @param post [Thredded::PostView] %>
+<%= content_tag :article, id: dom_id(post), class: 'thredded--post thredded--post-moderation' do %>
+  <%= render 'thredded/posts_common/header_with_user_and_topic',
+             post:           post,
+             post_user_link: if post.user
+                               link_to(post.user.thredded_display_name, user_moderation_path(post.user.id))
+                             else
+                               content_tag :em, t('thredded.null_user_name')
+                             end
+  %>
+  <%= render 'thredded/posts_common/content', post: post %>
+  <%= render 'thredded/posts_common/actions', post: post %>
+  <% if post.blocked? %>
+    <p class="thredded--alert thredded--alert-danger">
+      <%= render 'thredded/shared/content_moderation_blocked_state', moderation_record: post.last_moderation_record %>
+    </p>
+  <% end %>
+  <%= render 'post_moderation_actions', post: post %>
+<% end %>
