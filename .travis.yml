@@ -1,0 +1,22 @@
+language: ruby
+rvm: 2.3.1
+
+env:
+  - DB=postgres
+  - RAILS_ENV=test
+
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+
+script:
+  - bundle exec rake db:schema:load
+  - bundle exec rake db:test:prepare
+
+after_failure:
+  - "mysql -e 'show databases;'"
+  - "cat ./config/database.yml"
+  - "echo $RAILS_ENV"
+  - "bundle exec rake --version"
+
+services:
+  - postgresql
