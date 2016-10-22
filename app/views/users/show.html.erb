@@ -1,4 +1,4 @@
-<%= @user.name %>
+<%= render partial: 'creatives/navbar' %>
 
 <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
       posts: Thredded.posts_page_view(scope: @user.thredded_posts.order_newest_first.limit(5),
