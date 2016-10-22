@@ -1,11 +1,10 @@
-# README
+# Prosper Forums
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Build Status](https://travis-ci.org/jasperong/gift-the-code.svg?branch=master)](https://travis-ci.org/jasperong/gift-the-code)
 
-Things you may want to cover:
+# gift-the-code
 
-* Ruby version
+* Ruby version 2.3.1
 
 * System dependencies
 
@@ -22,4 +21,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-# gift-the-code
