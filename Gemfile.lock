@@ -406,12 +406,9 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise
-<<<<<<< HEAD
   figaro
   fog
-=======
   frontend-generators
->>>>>>> 36ed62d47cd852574db70421dda044b4c06e9dea
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -430,4 +427,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.13.5
+   1.13.6

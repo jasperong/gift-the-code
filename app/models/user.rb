@@ -5,14 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   mount_uploader :avatar, AvatarUploader
 
-  u = User.new
-  u.avatar = params[:file]
-  u.avatar = File.open('somewhere')
-  u.save!
-  u.avatar.url # => '/url/to/file.png'
-  u.avatar.current_path # => 'path/to/file.png'
-  u.avatar.identifier # => 'file.png'
-
+  
   # User Avatar Validation
   validates_integrity_of  :avatar
   validates_processing_of :avatar
