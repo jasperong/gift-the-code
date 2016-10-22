@@ -6,6 +6,6 @@ CarrierWave.configure do |config|
       aws_secret_access_key: ENV["aws_access_secret_key"],
       region: 'us-west-2'
   }
-  config.fog_directory  = "tutsplus-avatar"
+  config.fog_directory  = "myavatars"
   config.fog_public     = false
 end
