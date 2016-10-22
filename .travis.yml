@@ -1,8 +1,11 @@
 language: ruby
-rvm:
-  - 2.3.1
-  - 2.2
-  - 2.1
+rvm: 2.3.1
+
+env:
+  - DB=postgres
+
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
 
 services:
   - postgresql
