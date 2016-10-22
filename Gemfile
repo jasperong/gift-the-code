@@ -21,6 +21,8 @@ gem 'bootstrap', '~> 4.0.0.alpha5'
 
 gem 'sprockets-rails'
 
+gem 'frontend-generators'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
