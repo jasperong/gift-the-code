@@ -183,7 +183,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: asset-data-url("creative/header.jpg");
+    background-image: asset-data-url("creative/header.png");
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -396,6 +396,8 @@ fieldset[disabled] .btn-default.active {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+    margin: 30px;
+    width: 150px;
 }
 
 .btn-primary:hover,
