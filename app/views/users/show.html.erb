@@ -2,32 +2,87 @@
       posts: Thredded.posts_page_view(scope: @user.thredded_posts.order_newest_first.limit(5),
                                       current_user: current_user) } %>
 
-<%= render partial: 'users/sessions/usernavbar' %>
+<%= render partial: 'devise/registrations/usernavbar' %>
+
+
+<!-- Bootstrap -->
 
 <div class="container">
-  <div class="">
-           <ul class="">
-             <a href="<%= thredded_path %>" class="navbar-brand page-scroll">Dashboard</a>
-           </ul>
-       </div>
-  <div class="">
-           <ul class="">
-             <a href="<%= edit_user_registration_path %>" class="navbar-brand page-scroll">Edit User</a>
-           </ul>
-       </div>
-  <section>
-    <div class="profile-pic">
+    <div class="row profile">
+    <div class="col-md-3">
+      <div class="profile-sidebar">
+        <!-- SIDEBAR USERPIC -->
+        <div class="profile-userpic">
+          <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+        </div>
+        <!-- END SIDEBAR USERPIC -->
+        <!-- SIDEBAR USER TITLE -->
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            <%= @user.name %>
+          </div>
+          <div class="profile-usertitle-job">
+            <%= @user.occupation %>
+          </div>
+          <div class="profile-usertitle-location">
+            <%= @user.location %>
+          </div>
+        </div>
+        <!-- END SIDEBAR USER TITLE -->
+        <!-- SIDEBAR BUTTONS -->
+        <div class="profile-userbuttons">
+          <button type="button" class="btn btn-success btn-sm">Follow</button>
+          <button type="button" class="btn btn-danger btn-sm">Message</button>
+        </div>
+        <!-- END SIDEBAR BUTTONS -->
+        <!-- SIDEBAR MENU -->
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li class="active">
+              <a href="#">
+              <i class="glyphicon glyphicon-home"></i>
+              Overview </a>
+            </li>
+            <li>
+              <a href="edit">
+              <i class="glyphicon glyphicon-user"></i>
+              Edit Account </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+              <i class="glyphicon glyphicon-ok"></i>
+              Tasks </a>
+            </li>
+            <li>
+              <a href="#">
+              <i class="glyphicon glyphicon-flag"></i>
+              Help </a>
+            </li>
+          </ul>
+        </div>
+        <!-- END MENU -->
+      </div>
+    </div>
+    <div class="col-md-9">
+
+      <div>
+        <button type="button" class="user-btn" id="btn-1">My Favourite Posts</button>
+      </div>
+
+      <div>
+        <button type="button" class="user-btn" id="btn-2">Questions I've Answered</button>
+      </div>
+
+
+      <div>
+        <button type="button" class="user-btn" id="btn-3">Questions I've Asked</button>
+      </div>
+
+
+      <div>
+        <button type="button" class="user-btn" id="btn-4">My Favourite Resources</button>
+      </div>
 
     </div>
-    <div class="profile-content">
-
-    </div>
-
-  </section>
-  <section>
-    <span id=""></span>
-    <span id=""></span>
-    <span id=""></span>
-    <span id=""></span>
-  </section>
+  </div>
 </div>
