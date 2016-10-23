@@ -1,4 +1,4 @@
-<%= render 'navbar' %>
+<%= render partial: 'users/sessions/usernavbar' %>
 
 <div id="header-logo"> <%= image_tag "creative/header/PCCLogoSmall.png" %> </div>
 
@@ -19,10 +19,10 @@
     </div>
 
     <div class="field">
-      <% if @minimum_password_length %>
+      <!-- <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, :placeholder => 'password', autocomplete: "off" %>
+      <% end %><br /> -->
+      <%= f.password_field :password, :placeholder => 'password (min 6 characters)', autocomplete: "off" %>
     </div>
 
     <div class="field">

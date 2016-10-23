@@ -150,3 +150,11 @@ div#registration_form {
 input[type="submit"] {
     background: #ee592b;
 }
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+// drop shadow for company text
+a.navbar-brand.page-scroll {
+    box-shadow: 4px 3px 20px #888888;
+}
