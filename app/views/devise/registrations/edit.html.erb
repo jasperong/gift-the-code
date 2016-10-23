@@ -19,6 +19,10 @@
       <%= f.telephone_field :phone_number, placeholder: '416 123 456', autofocus: true %>
     </div>
 
+    <div class="field">
+      <%= f.text_field :occupation, placeholder: 'occupation', autofocus: true %>
+    </div>
+
 
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -41,7 +45,7 @@
 
     <div class="field">
       <!-- <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br /> -->
-      <%= f.password_field :current_password, placeholder: 'current password', autocomplete: "off" %>
+      <%= f.password_field :current_password, placeholder: 'password needed to edit', autocomplete: "off" %>
     </div>
 
     <div class="actions">

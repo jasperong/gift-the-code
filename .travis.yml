@@ -1,22 +1,23 @@
 language: ruby
 rvm: 2.3.1
-
 env:
-  - DB=postgres
-  - RAILS_ENV=test
-
+- DB=postgres
+- RAILS_ENV=test
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
-
-script:
-  - bundle exec rake db:schema:load
-  - bundle exec rake db:test:prepare
-
+- psql -c 'create database travis_ci_test;' -U postgres
 after_failure:
-  - "mysql -e 'show databases;'"
-  - "cat ./config/database.yml"
-  - "echo $RAILS_ENV"
-  - "bundle exec rake --version"
-
+- mysql -e 'show databases;'
+- cat ./config/database.yml
+- echo $RAILS_ENV
+- bundle exec rake --version
 services:
-  - postgresql
+- postgresql
+deploy:
+  provider: s3
+  access_key_id: AKIAIG44I4GXABHA6LUA
+  secret_access_key:
+    secure: kj0DQuNH/wtBFEs+VjNN0KvwL9I7yNxglHtaL2n/y4/hGGavCWuYcXgCfaDGuT6Dh810gOLGon3nHz6Mo3sZM5aSrNFB0jCa2cBu4xHuIpoJRD/LE5oZd1Qrr0w1OtI8OarNYI65h474zxrx7mEcg0UpxUNpi+mi27d7TjTZKWmdJtNBewi/pGjmCUBLMZYxMqEhdYyEFRH0f7SuvIAd6B4ZANszYx9ijsaFEgea3BxYMcmYrPG3BICyuIIlAxtqcJFD/DJyI3gs+ouUcl4xLBgWg0ibzoKG2lwYGFGcTN8NWE+8wH9pbjb8U3dcY9n23chqCsMCBFglS6OCxZsn2/oqoMRffDYEa0A9hqdTMO0/1OIMS2swyEny5aEcTqAx+KN4bXaTp0s/H+0bfUmuDBRUJCIN1VpBI07Ewe5MCuONAd4AJSxatYc4/B59sWnHYHVZm1xSaq3rX0+U52voE+zXXngVVvbEtHwGIxKG0dlREcdfU2BrwsH61hbluCy/JFC3TdpVLLBJfgJMNFULZNd4q0N+nGeNqkSA27++klxN/ms2QQPCl0AJrNKcff+vq45Z6kY2uFKLuC7zX7A+Zvn+8z3csA3sVlRYzldgaDFQxjJatl9yu02k2R2DfhpcPgjqGttipKfXAUaOCXWe0ID5p1U6GvifY98nnsp3rWE=
+  bucket: ''
+  acl: ''
+  on:
+    repo: jasperong/gift-the-code

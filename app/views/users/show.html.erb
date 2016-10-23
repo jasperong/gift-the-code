@@ -2,8 +2,6 @@
       posts: Thredded.posts_page_view(scope: @user.thredded_posts.order_newest_first.limit(5),
                                       current_user: current_user) } %>
 
-
-
 <%= render partial: 'devise/registrations/usernavbar' %>
 
 
@@ -21,10 +19,13 @@
         <!-- SIDEBAR USER TITLE -->
         <div class="profile-usertitle">
           <div class="profile-usertitle-name">
-            Marcus Doe
+            <%= @user.name %>
           </div>
           <div class="profile-usertitle-job">
-            Developer
+            <%= @user.occupation %>
+          </div>
+          <div class="profile-usertitle-location">
+            <%= @user.location %>
           </div>
         </div>
         <!-- END SIDEBAR USER TITLE -->
@@ -68,7 +69,6 @@
         <button type="button" class="user-btn" id="btn-1">My Favourite Posts</button>
       </div>
 
-
       <div>
         <button type="button" class="user-btn" id="btn-2">Questions I've Answered</button>
       </div>
@@ -80,7 +80,7 @@
 
 
       <div>
-        <button type="button" class="user-btn" id="btn-4">My Favourite Resources</button>  
+        <button type="button" class="user-btn" id="btn-4">My Favourite Resources</button>
       </div>
 
     </div>
