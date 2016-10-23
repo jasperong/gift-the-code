@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_out_path_for(resource_or_scope)
-    request.referrer
+    root_path
   end
 
   def after_sign_up_path_for(resource)
@@ -26,8 +26,8 @@ class ApplicationController < ActionController::Base
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :location, :phone_number, :avatar, :avatar_cache])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :location, :phone_number, :avatar, :avatar_cache])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :location, :phone_number, :avatar, :avatar_cache, :remove_avatar])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :location, :phone_number, :avatar, :avatar_cache, :remove_avatar])
 
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :location, :phone_number, :avatar])
     devise_parameter_sanitizer.permit(:account_update, keys: [:name, :location, :phone_number, :avatar])
