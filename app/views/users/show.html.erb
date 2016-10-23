@@ -3,7 +3,13 @@
                                       current_user: current_user) } %>
 
 <%= render partial: 'users/sessions/usernavbar' %>
+
 <div class="container">
+  <div class="navbar-right">
+           <ul class="nav-right">
+             <a href="<%= thredded_path %>" class="navbar-brand page-scroll">My Dashboard</a>
+           </ul>
+       </div>
   <section>
     <div class="profile-pic">
 
@@ -11,6 +17,7 @@
     <div class="profile-content">
 
     </div>
+
   </section>
   <section>
     <span id=""></span>
