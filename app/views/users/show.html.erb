@@ -1,21 +1,81 @@
-<%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
-      posts: Thredded.posts_page_view(scope: @user.thredded_posts.order_newest_first.limit(5),
-                                      current_user: current_user) } %>
 
 <%= render partial: 'users/sessions/usernavbar' %>
+
+
+<!-- Bootstrap -->
+
 <div class="container">
-  <section>
-    <div class="profile-pic">
+    <div class="row profile">
+    <div class="col-md-3">
+      <div class="profile-sidebar">
+        <!-- SIDEBAR USERPIC -->
+        <div class="profile-userpic">
+          <a class="profile_userpic" href="#">
+            <%= image_tag current_user.avatar %>
+            <img src="<%= current_user.avatar.url %>" class="img-responsive image_upload" alt="">
+          </a>
+        </div>
 
-    </div>
-    <div class="profile-content">
 
+        <%= form_for @user, html: { multipart: true } do |f| %>
+          <p>
+            <label>Upload New Image</label>
+            <%= f.file_field :avatar %>
+            <%= f.hidden_field :avatar_cache %>
+          </p>
+        <% end %>
+
+        <!-- END SIDEBAR USERPIC -->
+        <!-- SIDEBAR USER TITLE -->
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            <%= user.thredded_display_name %>
+          </div>
+          <div class="profile-usertitle-job">
+            <%= current_user.title %>
+          </div>
+        </div>
+        <!-- END SIDEBAR USER TITLE -->
+        <!-- SIDEBAR BUTTONS -->
+        <div class="profile-userbuttons">
+          <button type="button" class="btn btn-success btn-sm">Follow</button>
+          <button type="button" class="btn btn-danger btn-sm">Message</button>
+        </div>
+        <!-- END SIDEBAR BUTTONS -->
+        <!-- SIDEBAR MENU -->
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li class="active">
+              <a href="#">
+              <i class="glyphicon glyphicon-home"></i>
+              Overview </a>
+            </li>
+            <li>
+              <a href="#">
+              <i class="glyphicon glyphicon-user"></i>
+              Account Settings </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+              <i class="glyphicon glyphicon-ok"></i>
+              Tasks </a>
+            </li>
+            <li>
+              <a href="#">
+              <i class="glyphicon glyphicon-flag"></i>
+              Help </a>
+            </li>
+          </ul>
+        </div>
+        <!-- END MENU -->
+      </div>
     </div>
-  </section>
-  <section>
-    <span id=""></span>
-    <span id=""></span>
-    <span id=""></span>
-    <span id=""></span>
-  </section>
+    <div class="col-md-9">
+            <div class="profile-content">
+                <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
+                      posts: Thredded.posts_page_view(scope: @user.thredded_posts.order_newest_first.limit(5),
+                                                      current_user: current_user) } %>
+            </div>
+    </div>
+  </div>
 </div>
