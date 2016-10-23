@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 
 <%= render partial: 'users/sessions/usernavbar' %>
 
+=======
+<%# Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
+      posts: Thredded.posts_page_view(scope: @user.thredded_posts.order_newest_first.limit(5),
+                                      current_user: current_user) } %>
+
+<%= render partial: 'devise/registrations/usernavbar' %>
+>>>>>>> 58ca63c6e7a2e09e2849133b30d2e30ad90e28ae
 
 
 <!-- Bootstrap -->
@@ -30,10 +38,20 @@
         <!-- SIDEBAR USER TITLE -->
         <div class="profile-usertitle">
           <div class="profile-usertitle-name">
+<<<<<<< HEAD
             <%= user.thredded_display_name %>
           </div>
           <div class="profile-usertitle-job">
             <%= current_user.title %>
+=======
+            <%= @user.name %>
+          </div>
+          <div class="profile-usertitle-job">
+            <%= @user.occupation %>
+          </div>
+          <div class="profile-usertitle-location">
+            <%= @user.location %>
+>>>>>>> 58ca63c6e7a2e09e2849133b30d2e30ad90e28ae
           </div>
         </div>
         <!-- END SIDEBAR USER TITLE -->
@@ -52,9 +70,9 @@
               Overview </a>
             </li>
             <li>
-              <a href="#">
+              <a href="edit">
               <i class="glyphicon glyphicon-user"></i>
-              Account Settings </a>
+              Edit Account </a>
             </li>
             <li>
               <a href="#" target="_blank">
@@ -72,6 +90,7 @@
       </div>
     </div>
     <div class="col-md-9">
+<<<<<<< HEAD
             <div class="profile-content">
                 <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
                       posts: Thredded.posts_page_view(scope: @user.thredded_posts.order_newest_first.limit(5),
@@ -86,4 +105,27 @@
     <span id=""></span>
     <span id=""></span>
   </section>
+=======
+
+      <div>
+        <button type="button" class="user-btn" id="btn-1">My Favourite Posts</button>
+      </div>
+
+      <div>
+        <button type="button" class="user-btn" id="btn-2">Questions I've Answered</button>
+      </div>
+
+
+      <div>
+        <button type="button" class="user-btn" id="btn-3">Questions I've Asked</button>
+      </div>
+
+
+      <div>
+        <button type="button" class="user-btn" id="btn-4">My Favourite Resources</button>
+      </div>
+
+    </div>
+  </div>
+>>>>>>> 58ca63c6e7a2e09e2849133b30d2e30ad90e28ae
 </div>
