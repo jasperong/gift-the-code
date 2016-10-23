@@ -17,9 +17,12 @@
         </div>
 
 
+
+
         <%= form_for @user, html: { multipart: true } do |f| %>
           <p>
-            <label>Upload New Image</label>
+            <label>My Avatar</label>
+            <%= image_tag(@user.avatar_url) if @user.avatar? %>
             <%= f.file_field :avatar %>
             <%= f.hidden_field :avatar_cache %>
           </p>
