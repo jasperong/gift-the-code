@@ -1,5 +1,33 @@
-<%= @user.name %>
-
 <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
       posts: Thredded.posts_page_view(scope: @user.thredded_posts.order_newest_first.limit(5),
                                       current_user: current_user) } %>
+
+<%= render partial: 'users/sessions/usernavbar' %>
+
+<div class="container">
+  <div class="">
+           <ul class="">
+             <a href="<%= thredded_path %>" class="navbar-brand page-scroll">Dashboard</a>
+           </ul>
+       </div>
+  <div class="">
+           <ul class="">
+             <a href="<%= edit_user_registration_path %>" class="navbar-brand page-scroll">Edit User</a>
+           </ul>
+       </div>
+  <section>
+    <div class="profile-pic">
+
+    </div>
+    <div class="profile-content">
+
+    </div>
+
+  </section>
+  <section>
+    <span id=""></span>
+    <span id=""></span>
+    <span id=""></span>
+    <span id=""></span>
+  </section>
+</div>

@@ -1,0 +1,13 @@
+@import "thredded/dependencies";
+@import "thredded/thredded";
+
+
+ul.thredded--user-navigation.thredded--user-navigation-standalone {
+
+}
+
+
+// Move search bar below nav
+form.thredded--form.thredded--navigation--search.thredded--navigation--search-topics {
+    padding-top: 50px;
+}

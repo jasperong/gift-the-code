@@ -23,9 +23,18 @@
                 <li>
                     <a class="page-scroll" href="#contact">Contact</a>
                 </li>
+
+                <!-- Show dashboard if user is logged in -->
+                <% if user_signed_in? %>
+                <li>
+                  <a href="<%= thredded_path %>" class="page-scroll">My Dashboard</a>
+                </li>
+                <% end %>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
+
+
 </nav>

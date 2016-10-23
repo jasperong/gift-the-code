@@ -1,42 +1,46 @@
-<h2>Sign up</h2>
+<%= render partial: 'users/sessions/usernavbar' %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div id="header-logo"> <%= image_tag "creative/header/PCCLogoSmall.png" %> </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, required: true %>
-  </div>
+<div id="registration_form">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
+    <div class="field">
+      <%= f.text_field :name, :placeholder => 'name', autofocus: true, required: true %>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+    <div class="field">
+      <%= f.text_field :name, :placeholder => 'last name', autofocus: true, required: true %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    <div class="field">
+      <%= f.email_field :email, :placeholder => 'email', autofocus: true %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <div class="field">
+      <!-- <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br /> -->
+      <%= f.password_field :password, :placeholder => 'password (min 6 characters)', autocomplete: "off" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :avatar do %>
-      <%= f.file_field :avatar %>
-      <%= f.hidden_field :avatar_cache %>
-    <% end %>
-  </div>
+    <div class="field">
+      <%= f.password_field :password_confirmation, :placeholder => 'confirm password', autocomplete: "off" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <!-- <div class="field">
+      <%= f.label :avatar do %>
+        <%= f.file_field :avatar %>
+        <%= f.hidden_field :avatar_cache %>
+      <% end %>
+    </div> -->
+
+    <div class="actions">
+      <%= f.submit "CREATE AN ACCOUNT" %>
+    </div>
+  <% end %>
+
+</div>
 
 <%= render "devise/shared/links" %>
