@@ -10,6 +10,14 @@
       <%= render group.messageboards %>
     <% end %>
 
+    <!-- This is a test -->
+    <div class="row">
+      <div class="col-md-8 col-sm-6">
+        <%= render 'category' %>
+      </div>
+    </div>
+    <!-- This is the end of the test -->
+
     <div class="thredded--messageboards--actions">
       <% if policy(Thredded::Messageboard.new).create? %>
         <a class="thredded--button" href="<%= new_messageboard_path %>"><%= t('thredded.messageboard.create') %></a>
