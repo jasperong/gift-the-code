@@ -2,6 +2,7 @@
 <%= render partial: 'users/sessions/usernavbar' %>
 
 
+
 <!-- Bootstrap -->
 
 <div class="container">
@@ -15,9 +16,6 @@
             <img src="<%= current_user.avatar.url %>" class="img-responsive image_upload" alt="">
           </a>
         </div>
-
-
-
 
         <%= form_for @user, html: { multipart: true } do |f| %>
           <p>
@@ -80,5 +78,12 @@
                                                       current_user: current_user) } %>
             </div>
     </div>
-  </div>
+
+  </section>
+  <section>
+    <span id=""></span>
+    <span id=""></span>
+    <span id=""></span>
+    <span id=""></span>
+  </section>
 </div>
