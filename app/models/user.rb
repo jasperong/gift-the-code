@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   mount_uploader :avatar, AvatarUploader
 
-  
   # User Avatar Validation
   validates_integrity_of  :avatar
   validates_processing_of :avatar
