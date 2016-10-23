@@ -7,7 +7,10 @@ require 'faker'
   User.create(
     name: Faker::Name.name,
     email: Faker::Internet.email,
-    password: Faker::Internet.password
+    password: Faker::Internet.password,
+    location: "#{Faker::Address.city}, #{Faker::Address.state}",
+    phone_number: Faker::PhoneNumber.cell_phone,
+    occupation: Faker::Company.profession
   )
 end
 
