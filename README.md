@@ -1,4 +1,4 @@
-# Propser Coach Canada
+# Prosper Coach Canada
 ====
 
 This applications provides a simple and extremely flexible forum for financial coaches. Easy file upload from Ruby applications. It works well with ```ruby version 2.3.1``` , platforms is built using Ruby on Rails. We used the Thredded gem to build the app. For more details about the gem visit Thredded (https://github.com/thredded/thredded)
