@@ -2,6 +2,8 @@
       posts: Thredded.posts_page_view(scope: @user.thredded_posts.order_newest_first.limit(5),
                                       current_user: current_user) } %>
 
+
+
 <%= render partial: 'devise/registrations/usernavbar' %>
 
 
