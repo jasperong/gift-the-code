@@ -21,7 +21,7 @@ hr {
 }
 
 hr.light {
-    border-color: #fff;
+    border-color: #ee592b;
 }
 
 a {
@@ -54,7 +54,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #d15f29;
+    background-color: #ebe5e2;
 }
 
 .bg-dark {
@@ -62,8 +62,11 @@ p {
     background-color: #222;
 }
 
-.text-faded {
-    color: rgba(255,255,255,.7);
+// .text-faded {
+//     color: rgba(2,2,0,0.7);
+// }
+p.text-faded {
+    color: rgba(2, 2, 2, 0.7);
 }
 
 section {
@@ -492,5 +495,15 @@ a.btn.btn-default.btn-xl {
     margin-top: 25px;
 }
 a.btn.btn-primary.btn-xl.page-scroll {
-    box-shadow: -1px 2px 8px #888888;
+    box-shadow: -1px 2px 9px rgba(136, 136, 136, 0.54);
+}
+
+h2.section-heading {
+    color: #222;
+}
+
+a.btn.btn-default.btn-xl {
+    background-color: #d15f29;
+    color: white;
+    box-shadow: -1px 2px 8px #888888;    
 }
