@@ -200,3 +200,9 @@ header {
     background-size: cover;
     -o-background-size: cover;
 }
+
+div#flash.thredded--flash-message.thredded--flash-message--notice {
+    padding-top: 15px !important;
+    color: orange !important;
+    font-family: helvetica !important;
+}
