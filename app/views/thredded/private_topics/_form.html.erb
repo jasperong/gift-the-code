@@ -13,6 +13,7 @@
                           placeholder:                 t('thredded.private_topics.form.users_placeholder'),
                           'data-thredded-users-select' => true,
                           'data-autocomplete-url'      => autocomplete_users_path %>
+                          <%= form.file_field :avatar %>
     </li>
 
     <%= render 'thredded/posts_common/form/content_field',
@@ -26,4 +27,3 @@
     </li>
   </ul>
 <% end %>
-

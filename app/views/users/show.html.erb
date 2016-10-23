@@ -1,6 +1,4 @@
-<%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
-      posts: Thredded.posts_page_view(scope: @user.thredded_posts.order_newest_first.limit(5),
-                                      current_user: current_user) } %>
+
 
 <%= render partial: 'users/sessions/usernavbar' %>
 
@@ -17,10 +15,12 @@
        </div>
   <section>
     <div class="profile-pic">
-
+      <%= image_tag current_user.avatar.url %>
     </div>
     <div class="profile-content">
-
+      <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
+            posts: Thredded.posts_page_view(scope: @user.thredded_posts.order_newest_first.limit(5),
+                                            current_user: current_user) } %>
     </div>
 
   </section>
