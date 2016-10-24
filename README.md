@@ -19,14 +19,13 @@ clone the repository:
 
 Then
 
-```GIT
+```Ruby
 bundle install
-
 ```
 
 To get the seed
 
-```GIT
+```Ruby
 
 rake db:seed
 
