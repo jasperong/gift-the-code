@@ -19,21 +19,14 @@ clone the repository:
 
 Then
 
-<<<<<<< HEAD
-```Ruby
-=======
-```ruby
->>>>>>> 102c18c39a53fc05f13d958deca9b0c1b40e5293
+
+```shell
 bundle install
 ```
 
 To get the seed
 
-<<<<<<< HEAD
-```Ruby
-=======
 ```ruby
->>>>>>> 102c18c39a53fc05f13d958deca9b0c1b40e5293
 
 rake db:seed
 
