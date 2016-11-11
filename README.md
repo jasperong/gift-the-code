@@ -7,7 +7,7 @@ This applications provides a simple and extremely flexible forum for financial c
 -------------------
 This application is public available for anyone who wants to contribute
   * This is web application is not a standard Ruby on rails MVC.
-  * If you have a contribution on how we can improve the application [ProsperCoach](https://fast-dusk-47603.herokuapp.com) demo.
+  * If you have a contribution on how we can improve the application [ProsperCoach](https://prospercanada.herokuapp.com) demo.
   * For any bugs discovered report to the issue tracker
 
 ### Installation
